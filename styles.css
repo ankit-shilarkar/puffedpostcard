@@ -235,6 +235,14 @@
   .piece-list li:last-of-type{border-bottom:none;}
   .piece-list .name{font-family:'Fraunces', serif; font-size:1.08rem; color:var(--plum);}
   .piece-list .price{font-weight:700; color:var(--rose-deep); font-variant-numeric:tabular-nums;}
+
+  /* ---------- "new item" badge ---------- */
+  /* Usage: <span class="badge-new">New</span> right after a flavour/name */
+  .badge-new{
+    display:inline-block; font-family:'Karla', sans-serif; font-weight:700; font-size:0.62rem;
+    letter-spacing:0.04em; text-transform:uppercase; color:#fff; background:var(--gold);
+    padding:2px 8px; border-radius:100px; margin-left:8px; vertical-align:middle;
+  }
   .menu-note{font-size:0.86rem; color:var(--ink-soft); margin-top:14px;}
 
   .more-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:20px;}
