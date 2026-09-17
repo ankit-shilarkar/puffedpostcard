@@ -57,70 +57,85 @@
       Duplicate one <a class="reel-card"> block below (there are two identical
       sets, back to back, so the scroll loops seamlessly — add the same new
       card to BOTH sets in the same position). Change href to the reel's real
-      Instagram link (e.g. https://www.instagram.com/reel/XXXXXXXXXXX/) and
-      edit the caption text. To remove a reel, delete its block from both sets.
-      To reorder, cut and paste a whole block to its new position in both sets.
+      Instagram link, point the <video> at a compressed clip in assets/reels/
+      (strip audio, ~480px wide, e.g.
+      ffmpeg -i in.mp4 -an -vf scale=478:-2 -c:v libx264 -crf 26 -movflags +faststart out.mp4)
+      and set poster to a matching still frame, then edit the caption text.
+      To remove a reel, delete its block from both sets. To reorder, cut and
+      paste a whole block to its new position in both sets.
     -->
     <div class="reel-track">
-      <a class="reel-card" href="https://www.instagram.com/puffedpostcard/" target="_blank" rel="noopener">
+      <a class="reel-card" href="https://www.instagram.com/reel/DcAhm-rs4XL/" target="_blank" rel="noopener">
+        <video src="assets/reels/reel1.mp4" poster="assets/reels/reel1.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
         <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7Z"/></svg></span>
-        <span class="cap">Frosting a Bento cake</span>
+        <span class="cap">Loaded with dry fruits</span>
         <span class="watch">Watch on Instagram ↗</span>
       </a>
-      <a class="reel-card" href="https://www.instagram.com/puffedpostcard/" target="_blank" rel="noopener">
+      <a class="reel-card" href="https://www.instagram.com/reel/Db3M1TCs58n/" target="_blank" rel="noopener">
+        <video src="assets/reels/reel2.mp4" poster="assets/reels/reel2.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
         <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7Z"/></svg></span>
-        <span class="cap">Red Velvet, sliced and ready</span>
+        <span class="cap">A heart cake, ready to gift</span>
         <span class="watch">Watch on Instagram ↗</span>
       </a>
-      <a class="reel-card" href="https://www.instagram.com/puffedpostcard/" target="_blank" rel="noopener">
+      <a class="reel-card" href="https://www.instagram.com/reel/Dbs3BPQMIap/" target="_blank" rel="noopener">
+        <video src="assets/reels/reel3.mp4" poster="assets/reels/reel3.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
         <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7Z"/></svg></span>
-        <span class="cap">Packing today's orders with love</span>
+        <span class="cap">Layered dessert in a jar</span>
         <span class="watch">Watch on Instagram ↗</span>
       </a>
-      <a class="reel-card" href="https://www.instagram.com/puffedpostcard/" target="_blank" rel="noopener">
+      <a class="reel-card" href="https://www.instagram.com/reel/DbSgMiOMMNO/" target="_blank" rel="noopener">
+        <video src="assets/reels/reel4.mp4" poster="assets/reels/reel4.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
         <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7Z"/></svg></span>
-        <span class="cap">Cookie dough, fresh from the bowl</span>
+        <span class="cap">Sweet little couple cakes</span>
         <span class="watch">Watch on Instagram ↗</span>
       </a>
-      <a class="reel-card" href="https://www.instagram.com/puffedpostcard/" target="_blank" rel="noopener">
+      <a class="reel-card" href="https://www.instagram.com/reel/DbGlCCCsDS6/" target="_blank" rel="noopener">
+        <video src="assets/reels/reel5.mp4" poster="assets/reels/reel5.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
         <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7Z"/></svg></span>
-        <span class="cap">Brownie squares, still warm</span>
+        <span class="cap">Chocolate truffle balls</span>
         <span class="watch">Watch on Instagram ↗</span>
       </a>
-      <a class="reel-card" href="https://www.instagram.com/puffedpostcard/" target="_blank" rel="noopener">
+      <a class="reel-card" href="https://www.instagram.com/reel/Db5wfRYsxLZ/" target="_blank" rel="noopener">
+        <video src="assets/reels/reel6.mp4" poster="assets/reels/reel6.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
         <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7Z"/></svg></span>
-        <span class="cap">A custom cake, start to finish</span>
+        <span class="cap">A Best Dad cake, finished with love</span>
         <span class="watch">Watch on Instagram ↗</span>
       </a>
       <!-- duplicate set, for a seamless loop -->
-      <a class="reel-card" href="https://www.instagram.com/puffedpostcard/" target="_blank" rel="noopener" aria-hidden="true">
+      <a class="reel-card" href="https://www.instagram.com/reel/DcAhm-rs4XL/" target="_blank" rel="noopener" aria-hidden="true">
+        <video src="assets/reels/reel1.mp4" poster="assets/reels/reel1.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
         <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7Z"/></svg></span>
-        <span class="cap">Frosting a Bento cake</span>
+        <span class="cap">Loaded with dry fruits</span>
         <span class="watch">Watch on Instagram ↗</span>
       </a>
-      <a class="reel-card" href="https://www.instagram.com/puffedpostcard/" target="_blank" rel="noopener" aria-hidden="true">
+      <a class="reel-card" href="https://www.instagram.com/reel/Db3M1TCs58n/" target="_blank" rel="noopener" aria-hidden="true">
+        <video src="assets/reels/reel2.mp4" poster="assets/reels/reel2.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
         <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7Z"/></svg></span>
-        <span class="cap">Red Velvet, sliced and ready</span>
+        <span class="cap">A heart cake, ready to gift</span>
         <span class="watch">Watch on Instagram ↗</span>
       </a>
-      <a class="reel-card" href="https://www.instagram.com/puffedpostcard/" target="_blank" rel="noopener" aria-hidden="true">
+      <a class="reel-card" href="https://www.instagram.com/reel/Dbs3BPQMIap/" target="_blank" rel="noopener" aria-hidden="true">
+        <video src="assets/reels/reel3.mp4" poster="assets/reels/reel3.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
         <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7Z"/></svg></span>
-        <span class="cap">Packing today's orders with love</span>
+        <span class="cap">Layered dessert in a jar</span>
         <span class="watch">Watch on Instagram ↗</span>
       </a>
-      <a class="reel-card" href="https://www.instagram.com/puffedpostcard/" target="_blank" rel="noopener" aria-hidden="true">
+      <a class="reel-card" href="https://www.instagram.com/reel/DbSgMiOMMNO/" target="_blank" rel="noopener" aria-hidden="true">
+        <video src="assets/reels/reel4.mp4" poster="assets/reels/reel4.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
         <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7Z"/></svg></span>
-        <span class="cap">Cookie dough, fresh from the bowl</span>
+        <span class="cap">Sweet little couple cakes</span>
         <span class="watch">Watch on Instagram ↗</span>
       </a>
-      <a class="reel-card" href="https://www.instagram.com/puffedpostcard/" target="_blank" rel="noopener" aria-hidden="true">
+      <a class="reel-card" href="https://www.instagram.com/reel/DbGlCCCsDS6/" target="_blank" rel="noopener" aria-hidden="true">
+        <video src="assets/reels/reel5.mp4" poster="assets/reels/reel5.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
         <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7Z"/></svg></span>
-        <span class="cap">Brownie squares, still warm</span>
+        <span class="cap">Chocolate truffle balls</span>
         <span class="watch">Watch on Instagram ↗</span>
       </a>
-      <a class="reel-card" href="https://www.instagram.com/puffedpostcard/" target="_blank" rel="noopener" aria-hidden="true">
+      <a class="reel-card" href="https://www.instagram.com/reel/Db5wfRYsxLZ/" target="_blank" rel="noopener" aria-hidden="true">
+        <video src="assets/reels/reel6.mp4" poster="assets/reels/reel6.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
         <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7Z"/></svg></span>
-        <span class="cap">A custom cake, start to finish</span>
+        <span class="cap">A Best Dad cake, finished with love</span>
         <span class="watch">Watch on Instagram ↗</span>
       </a>
     </div>
@@ -286,19 +301,8 @@
         <span class="chip">Affordable Prices</span>
       </div>
     </div>
-    <div class="about-art" aria-hidden="true">
-      <svg viewBox="0 0 200 200" fill="none">
-        <g stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-          <circle cx="100" cy="90" r="16" style="fill:var(--rose); fill-opacity:.35;"/>
-          <circle cx="72" cy="78" r="14" style="fill:var(--rose); fill-opacity:.28;"/>
-          <circle cx="128" cy="78" r="14" style="fill:var(--rose); fill-opacity:.28;"/>
-          <circle cx="80" cy="112" r="14" style="fill:var(--rose); fill-opacity:.28;"/>
-          <circle cx="120" cy="112" r="14" style="fill:var(--rose); fill-opacity:.28;"/>
-          <path d="M100 106v52"/>
-          <path d="M100 132c-14 0-22 8-26 18"/>
-          <path d="M100 146c14 0 22 6 27 16"/>
-        </g>
-      </svg>
+    <div class="about-art">
+      <img src="assets/photos/about-cake.jpg" alt="A heart-shaped chocolate cake decorated with pink and red buttercream roses, made by Puffed Postcard">
     </div>
   </div>
 </section>
@@ -347,5 +351,13 @@
 </footer>
 
 
+<script>
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.reel-card video').forEach(function (v) {
+      v.removeAttribute('autoplay');
+      v.pause();
+    });
+  }
+</script>
 </body>
 </html>
