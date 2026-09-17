@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puffed Postcard — Brand Guidelines</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Beau+Rivage&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF3EC;
+    --cream-deep:#F1E1D4;
+    --blush:#F3D9DF;
+    --rose:#B15C74;
+    --rose-deep:#8C4058;
+    --plum:#4E1D31;
+    --gold:#C08A3E;
+    --ink:#3B2A28;
+    --ink-soft:#6B5650;
+    --line: rgba(78,29,49,0.14);
+    --card-bg:#FFFDFB;
+    --shadow: 0 18px 40px -24px rgba(78,29,49,0.35);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --cream:#221319;
+      --cream-deep:#2B1820;
+      --blush:#3A2129;
+      --rose:#E48FA3;
+      --rose-deep:#F1AABB;
+      --plum:#F7E7DE;
+      --gold:#E0AE64;
+      --ink:#F3E6E0;
+      --ink-soft:#CDB6B0;
+      --line: rgba(247,231,222,0.14);
+      --card-bg:#2A171E;
+      --shadow: 0 18px 40px -24px rgba(0,0,0,0.6);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --cream:#221319;
+    --cream-deep:#2B1820;
+    --blush:#3A2129;
+    --rose:#E48FA3;
+    --rose-deep:#F1AABB;
+    --plum:#F7E7DE;
+    --gold:#E0AE64;
+    --ink:#F3E6E0;
+    --ink-soft:#CDB6B0;
+    --line: rgba(247,231,222,0.14);
+    --card-bg:#2A171E;
+    --shadow: 0 18px 40px -24px rgba(0,0,0,0.6);
+    color-scheme: dark;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Karla', sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:var(--rose-deep);}
+
+  .wrap{max-width:920px; margin:0 auto; padding:0 28px;}
+
+  /* ---------- Cover ---------- */
+  .cover{
+    padding:80px 0 60px;
+    text-align:center;
+    background:
+      radial-gradient(60% 50% at 18% 0%, var(--blush) 0%, transparent 60%),
+      radial-gradient(50% 45% at 100% 10%, var(--cream-deep) 0%, transparent 65%),
+      var(--cream);
+    border-bottom:1px solid var(--line);
+  }
+  .cover .eyebrow{
+    font-family:'Beau Rivage', cursive;
+    font-size:1.7rem;
+    color:var(--rose);
+  }
+  .cover img.logo{width:130px; margin:10px auto 6px;}
+  .cover h1{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(2.4rem, 6vw, 3.6rem);
+    margin:8px 0 4px;
+    color:var(--plum);
+  }
+  .cover p.tag{
+    font-style:italic;
+    font-family:'Fraunces', serif;
+    color:var(--ink-soft);
+    font-size:1.15rem;
+    margin:0 0 22px;
+  }
+  .cover .meta{
+    display:inline-flex; gap:10px; flex-wrap:wrap; justify-content:center;
+    font-size:0.85rem; color:var(--ink-soft);
+  }
+  .cover .meta span{
+    border:1px solid var(--line); border-radius:100px; padding:5px 14px;
+    background:var(--card-bg);
+  }
+
+  section{padding:56px 0; border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+
+  .kicker{
+    font-family:'Beau Rivage', cursive;
+    color:var(--rose);
+    font-size:1.5rem;
+    margin:0 0 2px;
+  }
+  h2{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:clamp(1.7rem, 3.4vw, 2.3rem);
+    margin:0 0 18px;
+    color:var(--plum);
+  }
+  h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.2rem;
+    margin:0 0 8px;
+    color:var(--plum);
+  }
+  p{margin:0 0 14px; max-width:68ch;}
+  .lede{font-size:1.08rem; color:var(--ink-soft); max-width:62ch;}
+
+  /* ---------- Mission callout ---------- */
+  .callout{
+    background:var(--card-bg);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:28px 30px;
+    box-shadow:var(--shadow);
+  }
+  .callout p{margin:0; max-width:60ch; font-size:1.05rem;}
+  .callout .sign{
+    font-family:'Beau Rivage', cursive;
+    color:var(--rose);
+    font-size:1.6rem;
+    margin-top:14px;
+    display:block;
+  }
+
+  /* ---------- Personality chips ---------- */
+  .chips{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;}
+  .chip{
+    font-size:0.92rem;
+    padding:8px 16px;
+    border-radius:100px;
+    border:1px solid var(--line);
+    background:var(--card-bg);
+    color:var(--ink);
+  }
+
+  /* ---------- Logo section ---------- */
+  .logo-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:8px;}
+  .logo-card{
+    border:1px solid var(--line); border-radius:18px; padding:26px;
+    display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px;
+  }
+  .logo-card.on-cream{background:var(--cream);}
+  .logo-card.on-blush{background:var(--blush);}
+  .logo-card.on-plum{background:#4E1D31;}
+  .logo-card.on-plum img{filter:brightness(0) invert(1);}
+  .logo-card.on-plum .cap{color:#FBF3EC;}
+  .logo-card img{width:96px;}
+  .logo-card .cap{font-size:0.85rem; color:var(--ink-soft);}
+  .logo-rules{margin-top:20px; display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+  .rule-col h4{
+    font-family:'Karla', sans-serif; font-weight:700; font-size:0.78rem;
+    letter-spacing:0.03em; margin:0 0 10px; color:var(--rose-deep);
+  }
+  .rule-col ul{margin:0; padding-left:18px;}
+  .rule-col li{margin-bottom:8px; font-size:0.95rem;}
+
+  /* ---------- Color palette ---------- */
+  .swatches{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin-top:8px;}
+  .swatch{border-radius:16px; overflow:hidden; border:1px solid var(--line);}
+  .swatch .block{height:86px;}
+  .swatch .label{padding:12px 14px; background:var(--card-bg);}
+  .swatch .label strong{display:block; font-family:'Fraunces', serif; font-size:1.02rem; color:var(--plum);}
+  .swatch .label span{font-size:0.8rem; color:var(--ink-soft); font-family:monospace, 'Karla';}
+  .swatch .label em{display:block; font-style:normal; font-size:0.82rem; margin-top:4px; color:var(--ink-soft);}
+
+  /* ---------- Type specimens ---------- */
+  .type-row{
+    display:flex; align-items:baseline; justify-content:space-between; gap:20px;
+    padding:22px 0; border-top:1px solid var(--line); flex-wrap:wrap;
+  }
+  .type-row:first-of-type{border-top:none;}
+  .type-row .role{width:180px; flex-shrink:0;}
+  .type-row .role strong{display:block; font-size:0.95rem;}
+  .type-row .role span{font-size:0.8rem; color:var(--ink-soft);}
+  .type-row .sample{flex:1; min-width:220px;}
+  .sample.script{font-family:'Beau Rivage', cursive; font-size:2.2rem; color:var(--rose);}
+  .sample.display{font-family:'Fraunces', serif; font-weight:600; font-size:1.9rem; color:var(--plum);}
+  .sample.display-i{font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:1.4rem; color:var(--plum);}
+  .sample.body{font-family:'Karla', sans-serif; font-size:1rem;}
+  .sample.label{font-family:'Karla', sans-serif; font-weight:700; font-size:0.78rem; letter-spacing:0.04em; color:var(--rose-deep);}
+
+  /* ---------- Icon row ---------- */
+  .icon-row{display:flex; gap:26px; flex-wrap:wrap; margin-top:10px;}
+  .icon-item{display:flex; flex-direction:column; align-items:center; gap:8px; width:96px;}
+  .icon-item svg{width:40px; height:40px; color:var(--rose-deep);}
+  .icon-item span{font-size:0.78rem; text-align:center; color:var(--ink-soft);}
+
+  /* ---------- Two col ---------- */
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:34px;}
+  .two-col .panel{border:1px solid var(--line); border-radius:16px; padding:22px 24px; background:var(--card-bg);}
+  .panel h4{margin:0 0 10px; font-family:'Fraunces', serif; color:var(--plum); font-size:1.05rem;}
+  .panel.do{border-color:rgba(76,140,90,0.35);}
+  .panel.dont{border-color:rgba(180,70,70,0.35);}
+  .panel ul{margin:0; padding-left:18px;}
+  .panel li{margin-bottom:7px; font-size:0.95rem;}
+
+  /* ---------- Voice examples ---------- */
+  .voice-ex{
+    display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:18px;
+  }
+  .voice-card{border-radius:14px; padding:18px 20px; border:1px solid var(--line);}
+  .voice-card.good{background:var(--blush);}
+  .voice-card.bad{background:var(--cream-deep);}
+  .voice-card .tag{font-size:0.72rem; font-weight:700; letter-spacing:0.04em; color:var(--ink-soft); display:block; margin-bottom:8px;}
+  .voice-card p{margin:0; font-size:0.98rem; color:var(--ink);}
+
+  footer{
+    padding:40px 0 60px; text-align:center;
+  }
+  footer .sign{font-family:'Beau Rivage', cursive; font-size:1.8rem; color:var(--rose);}
+  footer p{margin:6px auto 0; color:var(--ink-soft); font-size:0.85rem;}
+
+  @media (max-width:720px){
+    .logo-grid, .logo-rules, .two-col, .voice-ex{grid-template-columns:1fr;}
+    .swatches{grid-template-columns:repeat(2,1fr);}
+    .type-row{flex-direction:column; align-items:flex-start;}
+    .type-row .role{width:auto;}
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="wrap">
+    <div class="eyebrow">brand guidelines</div>
+    <img class="logo" src="assets/logo-full.png" alt="Puffed Postcard logo">
+    <h1>Puffed Postcard</h1>
+    <p class="tag">Making your day a little sweeter</p>
+    <div class="meta">
+      <span>Home bakery · Bhopal</span>
+      <span>@puffedpostcard</span>
+      <span>v1.0</span>
+    </div>
+  </div>
+</div>
+
+<section id="mission">
+  <div class="wrap">
+    <div class="kicker">who we are</div>
+    <h2>Brand overview</h2>
+    <p class="lede">A home bakery run with genuine care, not a factory line. Every guideline below exists to protect one feeling: that opening a box from Puffed Postcard should feel like a gift from someone who knows you, not a purchase from a shop.</p>
+    <div class="callout">
+      <p>We are a passionate bakery dedicated to crafting fresh, high-quality breads, cakes, and pastries every day, using the finest ingredients to bring flavours that feel like home. Every bite is made with care and passion — freshly baked at home, with love.</p>
+      <span class="sign">— the Puffed Postcard promise</span>
+    </div>
+    <h3 style="margin-top:32px;">Personality</h3>
+    <p>If Puffed Postcard were a person, she'd be the friend who remembers your birthday, hand-writes the card, and somehow makes the cake taste like a hug. Warm, unhurried, a little romantic — never slick or corporate.</p>
+    <div class="chips">
+      <span class="chip">Warm &amp; homemade</span>
+      <span class="chip">Personal, not corporate</span>
+      <span class="chip">Gentle &amp; feminine</span>
+      <span class="chip">Joyful, not loud</span>
+      <span class="chip">Detail-loving</span>
+      <span class="chip">Trustworthy</span>
+    </div>
+  </div>
+</section>
+
+<section id="logo">
+  <div class="wrap">
+    <div class="kicker">the mark</div>
+    <h2>Logo</h2>
+    <p>The jelly-mould silhouette dressed in cherry-blossom florals is the one piece of Puffed Postcard artwork that never changes. It should always appear exactly as supplied — never recoloured, redrawn, or stretched.</p>
+    <div class="logo-grid">
+      <div class="logo-card on-cream">
+        <img src="assets/logo-full.png" alt="Logo on cream">
+        <span class="cap">On cream (default)</span>
+      </div>
+      <div class="logo-card on-blush">
+        <img src="assets/logo-full.png" alt="Logo on blush">
+        <span class="cap">On blush</span>
+      </div>
+      <div class="logo-card on-plum">
+        <img src="assets/logo-full.png" alt="Logo on plum, reversed to white">
+        <span class="cap">Reversed, on plum or photos</span>
+      </div>
+      <div class="logo-card on-cream">
+        <div style="font-family:'Beau Rivage',cursive; font-size:2.6rem; color:var(--rose);">Puffed Postcard</div>
+        <span class="cap">Wordmark alone — text only, no plate</span>
+      </div>
+    </div>
+    <div class="logo-rules">
+      <div class="rule-col">
+        <h4>DO</h4>
+        <ul>
+          <li>Keep clear space around the mark of at least the height of the flower cluster on any side.</li>
+          <li>Use the reversed (white) version on photos, the plum panel, or any busy background.</li>
+          <li>Let it sit at a comfortable, readable size — it's a signature, not a background pattern.</li>
+        </ul>
+      </div>
+      <div class="rule-col">
+        <h4>DON'T</h4>
+        <ul>
+          <li>Don't recolour the florals to match a campaign — they stay rose and plum, always.</li>
+          <li>Don't place the unreversed mark on dark or busy photos where it disappears.</li>
+          <li>Don't add drop shadows, outlines, or stretch it off its natural square proportion.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="color">
+  <div class="wrap">
+    <div class="kicker">the palette</div>
+    <h2>Colour</h2>
+    <p>The palette comes from the logo, not a template: dusty rose and plum from the florals, warmed up with a cream base and a small pour of gold for moments that deserve a little sparkle.</p>
+    <div class="swatches">
+      <div class="swatch">
+        <div class="block" style="background:#FBF3EC;"></div>
+        <div class="label"><strong>Cream</strong><span>#FBF3EC</span><em>Base background — the "plate" everything sits on.</em></div>
+      </div>
+      <div class="swatch">
+        <div class="block" style="background:#F3D9DF;"></div>
+        <div class="label"><strong>Blush</strong><span>#F3D9DF</span><em>Soft section backgrounds, card fills.</em></div>
+      </div>
+      <div class="swatch">
+        <div class="block" style="background:#B15C74;"></div>
+        <div class="label"><strong>Rose</strong><span>#B15C74</span><em>Primary brand colour — links, icons, highlights.</em></div>
+      </div>
+      <div class="swatch">
+        <div class="block" style="background:#8C4058;"></div>
+        <div class="label"><strong>Rose Deep</strong><span>#8C4058</span><em>Hover / pressed states for rose elements.</em></div>
+      </div>
+      <div class="swatch">
+        <div class="block" style="background:#4E1D31;"></div>
+        <div class="label"><strong>Plum</strong><span>#4E1D31</span><em>Headlines, primary buttons, footer.</em></div>
+      </div>
+      <div class="swatch">
+        <div class="block" style="background:#C08A3E;"></div>
+        <div class="label"><strong>Gold</strong><span>#C08A3E</span><em>Rare accent — prices, a single sparkle. Never a background.</em></div>
+      </div>
+    </div>
+    <p style="margin-top:22px;"><strong>Rule of thumb:</strong> a page should read as cream and rose from across the room, with plum for weight and gold used like a pinch of edible glitter — a little goes a long way.</p>
+  </div>
+</section>
+
+<section id="type">
+  <div class="wrap">
+    <div class="kicker">the voice on the page</div>
+    <h2>Typography</h2>
+    <p>Three typefaces, three jobs. Never let more than two appear in the same sentence.</p>
+
+    <div class="type-row">
+      <div class="role"><strong>Beau Rivage</strong><span>Signature script — used sparingly</span></div>
+      <div class="sample script">Puffed Postcard</div>
+    </div>
+    <div class="type-row">
+      <div class="role"><strong>Fraunces</strong><span>Headlines &amp; section titles</span></div>
+      <div class="sample display">Our Menu, Our Story</div>
+    </div>
+    <div class="type-row">
+      <div class="role"><strong>Fraunces Italic</strong><span>Subtitles &amp; quiet asides</span></div>
+      <div class="sample display-i">baked fresh, every single morning</div>
+    </div>
+    <div class="type-row">
+      <div class="role"><strong>Karla</strong><span>Body copy, menus, buttons</span></div>
+      <div class="sample body">Order two days in advance and we'll have it ready, boxed and ribboned, exactly when you need it.</div>
+    </div>
+    <div class="type-row">
+      <div class="role"><strong>Karla Bold</strong><span>Small labels</span></div>
+      <div class="sample label">FRESH DAILY</div>
+    </div>
+
+    <div class="two-col" style="margin-top:26px;">
+      <div class="panel do">
+        <h4>Do</h4>
+        <ul>
+          <li>Use the script for the wordmark, one hero moment, or a single closing line — never body copy.</li>
+          <li>Set Fraunces headlines in sentence case, not ALL CAPS.</li>
+          <li>Give body text room: 1.6+ line height, comfortable paragraph width.</li>
+        </ul>
+      </div>
+      <div class="panel dont">
+        <h4>Don't</h4>
+        <ul>
+          <li>Don't set whole paragraphs in the script — it's decorative, not readable at length.</li>
+          <li>Don't introduce a fourth typeface for "just this one banner."</li>
+          <li>Don't tighten letter-spacing on Fraunces to save space; let headlines breathe instead.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="icons">
+  <div class="wrap">
+    <div class="kicker">small details</div>
+    <h2>Iconography &amp; illustration</h2>
+    <p>Line drawings only — the same soft, single-weight stroke as the florals in the logo. No flat-colour clipart, no stock cake photos-as-icons, no gradients.</p>
+    <div class="icon-row">
+      <div class="icon-item">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 10c0 10 4 12 4 20a6 6 0 0 0 12 0c0-8 4-10 4-20"/><path d="M14 10h20"/><path d="M24 30v10"/><path d="M18 44h12"/></svg>
+        <span>Whisk</span>
+      </div>
+      <div class="icon-item">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 6c6 6 6 12 0 18-6-6-6-12 0-18Z"/><path d="M14 24c4 4 4 8 0 12" transform="translate(0 4)"/><path d="M34 24c-4 4-4 8 0 12" transform="translate(0 4)"/><path d="M10 40h28"/></svg>
+        <span>Wheat &amp; grain</span>
+      </div>
+      <div class="icon-item">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 16c4 4 4-4 8 0s4-4 8 0 4-4 8 0 4-4 8 0"/><path d="M8 26c4 4 4-4 8 0s4-4 8 0 4-4 8 0 4-4 8 0"/><path d="M8 36c4 4 4-4 8 0s4-4 8 0 4-4 8 0 4-4 8 0"/></svg>
+        <span>Soft &amp; fluffy</span>
+      </div>
+      <div class="icon-item">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 6l3 9 9 3-9 3-3 9-3-9-9-3 9-3 3-9Z"/><path d="M38 30l1.4 3.6L43 35l-3.6 1.4L38 40l-1.4-3.6L33 35l3.6-1.4L38 30Z"/></svg>
+        <span>A little sparkle</span>
+      </div>
+      <div class="icon-item">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="18" width="28" height="20" rx="3"/><path d="M10 26h28"/><path d="M24 18v20"/><path d="M17 18c0-5 4-9 7-9s7 4 7 9"/></svg>
+        <span>Every occasion</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="voice">
+  <div class="wrap">
+    <div class="kicker">how we sound</div>
+    <h2>Voice &amp; tone</h2>
+    <p>We write the way we'd talk to someone picking up their order in person: warm, plain, a little affectionate. We say "we," never "the brand." We'd rather sound like a person than a menu.</p>
+    <div class="chips">
+      <span class="chip">Warm, not gushing</span>
+      <span class="chip">Plain words over fancy ones</span>
+      <span class="chip">Short sentences</span>
+      <span class="chip">Specific over generic</span>
+    </div>
+    <div class="voice-ex">
+      <div class="voice-card good">
+        <span class="tag">SOUNDS LIKE US</span>
+        <p>"Order two days ahead and we'll have your cake ready, just the way you pictured it."</p>
+      </div>
+      <div class="voice-card bad">
+        <span class="tag">DOESN'T SOUND LIKE US</span>
+        <p>"Our organization strives to deliver premium bakery solutions with a 48-hour lead time."</p>
+      </div>
+      <div class="voice-card good">
+        <span class="tag">SOUNDS LIKE US</span>
+        <p>"Custom cake in mind? Send us a photo on WhatsApp and we'll make it happen."</p>
+      </div>
+      <div class="voice-card bad">
+        <span class="tag">DOESN'T SOUND LIKE US</span>
+        <p>"Customization requests are subject to design feasibility and additional charges may apply."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="apply">
+  <div class="wrap">
+    <div class="kicker">putting it together</div>
+    <h2>At a glance</h2>
+    <div class="two-col">
+      <div class="panel">
+        <h4>Every piece should have</h4>
+        <ul>
+          <li>Cream or blush as the base — never stark white.</li>
+          <li>One Fraunces headline doing the talking.</li>
+          <li>Rose or plum for anything actionable (a button, a link, a price).</li>
+          <li>At most one sparkle of gold and one script moment.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h4>Ask before it ships</h4>
+        <ul>
+          <li>Does this still feel handmade, or has it started to feel corporate?</li>
+          <li>Would Akshita or Tanvi actually say this out loud?</li>
+          <li>Is the logo untouched and given room to breathe?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="sign">Puffed Postcard</span>
+    <p>Brand guidelines · v1.0 · keep this page close whenever new content is designed</p>
+  </div>
+</footer>
+
+</body>
+</html>
