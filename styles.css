@@ -245,6 +245,20 @@
   }
   .menu-note{font-size:0.86rem; color:var(--ink-soft); margin-top:14px;}
 
+  /* ---------- stall event ---------- */
+  #stall-event{background:var(--blush);}
+  #stall-event .menu-card{max-width:640px;}
+  .event-meta{
+    text-align:center; font-size:0.92rem; font-weight:600; color:var(--rose-deep);
+    margin:0 0 30px;
+  }
+  .stall-cat{
+    font-family:'Fraunces', serif; font-weight:600; color:var(--plum); font-size:1rem;
+    margin:24px 0 4px;
+  }
+  .stall-cat:first-of-type{margin-top:20px;}
+  .stall-unit{font-family:'Karla', sans-serif; font-weight:400; font-size:0.8rem; color:var(--ink-soft);}
+
   .more-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:20px;}
   .more-card{
     border:1px dashed var(--line); border-radius:16px; padding:20px; text-align:center;

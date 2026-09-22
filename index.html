@@ -83,6 +83,70 @@
   <svg class="wave" aria-hidden="true" viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,30 C240,60 480,0 720,28 C960,58 1200,0 1440,26 L1440,60 L0,60 Z"/></svg>
 </header>
 
+<!--
+  STALL EVENT — one-off for the Garba Night stall on 15 October.
+  Remove this whole section (or update the details) once the event has
+  passed. "New" badges below auto-hide 30 days after data-new-until via
+  the script at the end of the page — bump that date if these items stay
+  on beyond that.
+-->
+<section id="stall-event">
+  <div class="wrap">
+    <div class="kicker" style="text-align:center;">upcoming event</div>
+    <h2 style="text-align:center;">Meet Us at Garba Night</h2>
+    <p style="color:var(--ink-soft); max-width:56ch; margin:0 auto 10px; text-align:center;">We're setting up a stall for Navratri Garba — come say hi and pick up something sweet on your way out.</p>
+    <p class="event-meta">📅 15 October &nbsp;·&nbsp; 🕔 5 – 10 PM &nbsp;·&nbsp; 📍 Shri Kamal Garden, Rajharsh Colony, Kolar Rd, Sankhedi, Bhopal 462039</p>
+
+    <div class="menu-card">
+      <p class="menu-note" style="margin-top:0;">Stall-only menu, available on 15 October — not part of regular online ordering.</p>
+
+      <h4 class="stall-cat">Cookies <span class="stall-unit">(packet of 2)</span></h4>
+      <ul class="piece-list">
+        <li><span class="name">Ajwain Cookies <span class="badge-new" data-new-until="2026-10-22">New</span></span><span class="price">₹18</span></li>
+        <li><span class="name">Choco Chip Cookie <span class="badge-new" data-new-until="2026-10-22">New</span></span><span class="price">₹50</span></li>
+        <li><span class="name">Navratri Special Cookie <span class="badge-new" data-new-until="2026-10-22">New</span></span><span class="price">₹45</span></li>
+      </ul>
+
+      <h4 class="stall-cat">Jar Cakes <span class="stall-unit">(100 ml) — Classic</span></h4>
+      <ul class="piece-list">
+        <li><span class="name">Vanilla <span class="badge-new" data-new-until="2026-10-22">New</span></span><span class="price">₹50</span></li>
+        <li><span class="name">Pineapple <span class="badge-new" data-new-until="2026-10-22">New</span></span><span class="price">₹60</span></li>
+        <li><span class="name">Butterscotch <span class="badge-new" data-new-until="2026-10-22">New</span></span><span class="price">₹60</span></li>
+        <li><span class="name">Chocolate <span class="badge-new" data-new-until="2026-10-22">New</span></span><span class="price">₹60</span></li>
+      </ul>
+
+      <h4 class="stall-cat">Jar Cakes <span class="stall-unit">— Signature</span></h4>
+      <ul class="piece-list">
+        <li><span class="name">Cookie and Cream <span class="badge-new" data-new-until="2026-10-22">New</span></span><span class="price">₹70</span></li>
+        <li><span class="name">Oreo <span class="badge-new" data-new-until="2026-10-22">New</span></span><span class="price">₹70</span></li>
+        <li><span class="name">Truffle <span class="badge-new" data-new-until="2026-10-22">New</span></span><span class="price">₹80</span></li>
+      </ul>
+
+      <h4 class="stall-cat">Jar Cakes <span class="stall-unit">— Premium</span></h4>
+      <ul class="piece-list">
+        <li><span class="name">Blueberry <span class="badge-new" data-new-until="2026-10-22">New</span></span><span class="price">₹90</span></li>
+        <li><span class="name">Strawberry <span class="badge-new" data-new-until="2026-10-22">New</span></span><span class="price">₹90</span></li>
+        <li><span class="name">Red Velvet <span class="badge-new" data-new-until="2026-10-22">New</span></span><span class="price">₹90</span></li>
+      </ul>
+
+      <h4 class="stall-cat">Combos</h4>
+      <ul class="piece-list">
+        <li><span class="name">Classic, any 2</span><span class="price">₹99</span></li>
+        <li><span class="name">Signature, any 2</span><span class="price">₹139</span></li>
+        <li><span class="name">Premium, any 2</span><span class="price">₹169</span></li>
+      </ul>
+      <p class="menu-note">Mix &amp; match: any 2 → ₹15 off &nbsp;·&nbsp; any 4 → ₹45 off</p>
+
+      <h4 class="stall-cat">Also at the Stall</h4>
+      <ul class="piece-list">
+        <li><span class="name">Tea Cake <span class="badge-new" data-new-until="2026-10-22">New</span></span><span class="price">Ask at the stall</span></li>
+        <li><span class="name">Brownie <span class="badge-new" data-new-until="2026-10-22">New</span></span><span class="price">Ask at the stall</span></li>
+        <li><span class="name">Biscoff Dessert Cup <span class="badge-new" data-new-until="2026-10-22">New</span></span><span class="price">Ask at the stall</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <section id="reels">
   <div class="wrap">
     <div class="kicker">watch us bake</div>
@@ -406,6 +470,14 @@
       v.pause();
     });
   }
+
+  // "New" badges (see styles.css .badge-new) carry a data-new-until date
+  // and disappear on their own once that date has passed — no manual cleanup needed.
+  document.querySelectorAll('.badge-new[data-new-until]').forEach(function (badge) {
+    if (new Date() > new Date(badge.getAttribute('data-new-until'))) {
+      badge.remove();
+    }
+  });
 </script>
 </body>
 </html>
