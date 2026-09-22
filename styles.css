@@ -197,16 +197,22 @@
   #mtab-cakes:checked ~ .tab-bar label[for="mtab-cakes"],
   #mtab-brownies:checked ~ .tab-bar label[for="mtab-brownies"],
   #mtab-cupcakes:checked ~ .tab-bar label[for="mtab-cupcakes"],
+  #mtab-cookies:checked ~ .tab-bar label[for="mtab-cookies"],
+  #mtab-jarcakes:checked ~ .tab-bar label[for="mtab-jarcakes"],
   #mtab-more:checked ~ .tab-bar label[for="mtab-more"]{
     background:var(--surface-strong); color:var(--on-surface-strong);
   }
   #mtab-cakes:checked ~ .panel-cakes{display:block;}
   #mtab-brownies:checked ~ .panel-brownies{display:block;}
   #mtab-cupcakes:checked ~ .panel-cupcakes{display:block;}
+  #mtab-cookies:checked ~ .panel-cookies{display:block;}
+  #mtab-jarcakes:checked ~ .panel-jarcakes{display:block;}
   #mtab-more:checked ~ .panel-more{display:block;}
   #mtab-cakes:focus-visible ~ .tab-bar label[for="mtab-cakes"],
   #mtab-brownies:focus-visible ~ .tab-bar label[for="mtab-brownies"],
   #mtab-cupcakes:focus-visible ~ .tab-bar label[for="mtab-cupcakes"],
+  #mtab-cookies:focus-visible ~ .tab-bar label[for="mtab-cookies"],
+  #mtab-jarcakes:focus-visible ~ .tab-bar label[for="mtab-jarcakes"],
   #mtab-more:focus-visible ~ .tab-bar label[for="mtab-more"]{
     outline:3px solid var(--rose-deep); outline-offset:3px;
   }
@@ -252,12 +258,12 @@
     text-align:center; font-size:0.92rem; font-weight:600; color:var(--rose-deep);
     margin:0 0 30px;
   }
-  .stall-cat{
+  .menu-subcat{
     font-family:'Fraunces', serif; font-weight:600; color:var(--plum); font-size:1rem;
     margin:24px 0 4px;
   }
-  .stall-cat:first-of-type{margin-top:20px;}
-  .stall-unit{font-family:'Karla', sans-serif; font-weight:400; font-size:0.8rem; color:var(--ink-soft);}
+  .menu-subcat:first-of-type{margin-top:20px;}
+  .menu-subunit{font-family:'Karla', sans-serif; font-weight:400; font-size:0.8rem; color:var(--ink-soft);}
 
   .more-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:20px;}
   .more-card{
