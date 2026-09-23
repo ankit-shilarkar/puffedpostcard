@@ -330,6 +330,12 @@
     font-family:'Karla', sans-serif; font-weight:700; font-size:0.95rem; color:var(--gold);
   }
   .combo-accent svg{width:18px; height:18px; flex-shrink:0;}
+  .combo-pill{
+    display:inline-flex; align-items:center; gap:6px;
+    background:var(--gold); color:#fff; font-family:'Karla', sans-serif;
+    font-weight:700; font-size:0.88rem; padding:8px 18px; border-radius:100px;
+    margin-top:16px;
+  }
 
   .more-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:20px;}
   .more-card{
