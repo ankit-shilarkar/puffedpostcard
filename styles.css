@@ -324,6 +324,13 @@
   .menu-subcat:first-of-type{margin-top:20px;}
   .menu-subunit{font-family:'Karla', sans-serif; font-weight:400; font-size:0.8rem; color:var(--ink-soft);}
 
+  /* ---------- combo offer callout ---------- */
+  .combo-accent{
+    display:flex; align-items:center; gap:8px; margin:14px 0 0;
+    font-family:'Karla', sans-serif; font-weight:700; font-size:0.95rem; color:var(--gold);
+  }
+  .combo-accent svg{width:18px; height:18px; flex-shrink:0;}
+
   .more-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:20px;}
   .more-card{
     border:1px dashed var(--line); border-radius:16px; padding:20px; text-align:center;
