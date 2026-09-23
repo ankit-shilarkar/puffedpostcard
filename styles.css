@@ -144,13 +144,37 @@
   :root[data-theme="light"] .theme-toggle .icon-sun{display:block;}
   :root[data-theme="light"] .theme-toggle .icon-moon{display:none;}
 
-  /* logo-mark.png is drawn in plum linework for a light background; on a
-     dark background it goes nearly invisible, so reverse it to the white
-     silhouette treatment from the brand guidelines ("on plum") instead. */
+  /* logo-mark.png is drawn in plum/rose tones for a light background; on a
+     dark background it loses contrast. Rather than flattening it to a
+     solid silhouette (which erases the flower petal/leaf detail), give it
+     a fixed light plate behind it so its own colours stay intact. Padding
+     is a fixed px value (not %) since percentage padding on an <img>
+     resolves against the containing block's width, not the image's own
+     rendered size, and would blow out of proportion here. */
   @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]) .logo-mark{filter:brightness(0) invert(1);}
+    :root:not([data-theme="light"]) .logo-mark{
+      background:#FBF3EC; border-radius:20%;
+      box-shadow:0 10px 24px -12px rgba(0,0,0,.5);
+    }
+    :root:not([data-theme="light"]) .brand .logo-mark,
+    :root:not([data-theme="light"]) .foot-brand .logo-mark{
+      padding:6px;
+    }
+    :root:not([data-theme="light"]) .hero-logo.logo-mark{
+      padding:22px;
+    }
   }
-  :root[data-theme="dark"] .logo-mark{filter:brightness(0) invert(1);}
+  :root[data-theme="dark"] .logo-mark{
+    background:#FBF3EC; border-radius:20%;
+    box-shadow:0 10px 24px -12px rgba(0,0,0,.5);
+  }
+  :root[data-theme="dark"] .brand .logo-mark,
+  :root[data-theme="dark"] .foot-brand .logo-mark{
+    padding:6px;
+  }
+  :root[data-theme="dark"] .hero-logo.logo-mark{
+    padding:22px;
+  }
 
   /* ---------- hero ---------- */
   .hero{
